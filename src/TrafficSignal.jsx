@@ -13,7 +13,8 @@ const renderSignal = (signalColor) => {
 };
 
 function TrafficSignal() {
-  const { signal: { color }, changeSignal } = useContext(CarsContext);
+  const { signalColor, changeSignal } = useContext(CarsContext);
+  console.log(useContext(CarsContext));
 
   return (
     <div>
@@ -28,7 +29,7 @@ function TrafficSignal() {
           Green
         </button>
       </div>
-      <img className="signal" src={renderSignal(color)} alt="" />
+      <img className="signal" src={renderSignal(signalColor)} alt="" />
     </div>
   );
 };

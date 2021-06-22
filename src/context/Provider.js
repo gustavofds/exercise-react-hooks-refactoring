@@ -11,9 +11,7 @@ function Provider(props) {
     yellow: false,
   });
 
-  const [signal, setSignalColor] = useState({
-    color: 'red',
-  })
+  const [signalColor, setSignalColor] = useState('red');
 
   const moveCar = function(car, side) {
     setCarPosition({
@@ -23,15 +21,13 @@ function Provider(props) {
   };
 
   const changeSignal = function (color) {
-    setSignalColor({
-      color,
-    })
+    setSignalColor(color)
   }
 
   
   const context = {
     cars,
-    signal,
+    signalColor,
     moveCar,
     changeSignal,
   };
